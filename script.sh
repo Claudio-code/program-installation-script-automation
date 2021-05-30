@@ -10,7 +10,7 @@ URL_DOWNLOAD_COMPOSER="https://getcomposer.org/installer"
 sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/cache/apt/archives/lock
 sudo dpkg --add-architecture i386
-sudo apt update -y
+sudo apt update
 
 # install libs
 sudo apt -f install -y
@@ -44,6 +44,7 @@ sudo usermod -aG docker ${USER}
 
 # install PHP
 sudo add-apt-repository "$PPA_PHP" -y
+sudo apt update
 sudo apt-get install  php7.4 \
   mcrypt \
   php7.4-xml \
@@ -73,6 +74,7 @@ sudo apt remove apache2 -y
 # install package manager to PHP composer
 curl -sS "$URL_DOWNLOAD_COMPOSER" -o composer-setup.php
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+sudo rm -R composer-setup.php
 
 # install apps snaps
 sudo snap install code --classic
