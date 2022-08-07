@@ -29,3 +29,5 @@ case $distro in
     println_sucsess "I couldn't identify your system."
     ;;
 esac
+
+git clone https://github.com/Claudio-code/script-to-install-kubernetes.git && cd ./script-to-install-kubernetes && sudo ./kubernetes_cluster_install.sh
