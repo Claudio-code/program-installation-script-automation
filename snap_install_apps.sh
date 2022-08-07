@@ -12,6 +12,7 @@ SOFTWARE_TO_INSTALL_SNAPS_LEGACY=(
   code
   kontena-lens
   intellij-idea-community
+  kubectl
 )
 
 install_package_with_snaps () {

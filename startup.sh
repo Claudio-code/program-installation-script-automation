@@ -31,3 +31,5 @@ case $distro in
 esac
 
 git clone https://github.com/Claudio-code/script-to-install-kubernetes.git && cd ./script-to-install-kubernetes && sudo ./kubernetes_cluster_install.sh
+mkdir "$HOME/.kube"
+multipass exec kube-node-master -- bash -c "sudo cat /etc/kubernetes/admin.conf" > "$HOME/.kube/config"
