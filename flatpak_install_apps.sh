@@ -24,6 +24,6 @@ install_package_with_flatpak () {
   add_flathub_repository
   for programs in ${LIST_APPS_FLATPAK[@]}; do
     println_sucsess "The software $programs being installed."
-    flatpak install flathub $programs -y
+    flatpak install flathub $programs -y &> /dev/null
   done
 }
