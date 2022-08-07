@@ -18,20 +18,12 @@ install_package_with_snaps () {
   println_sucsess "Downloading packages snaps."
 
   for programs in ${SOFTWARE_TO_INSTALL_SNAPS[@]}; do
-    if ! snap list | grep $programs; then
-      println_sucsess "The software $programs being installed."
-      sudo snap install $programs &> /dev/null
-    else
-      println_sucsess "The software $programs has already been installed."
-    fi
+    println_sucsess "The software $programs being installed."
+    sudo snap install $programs &> /dev/null
   done
 
   for programs in ${SOFTWARE_TO_INSTALL_SNAPS_LEGACY[@]}; do
-    if ! snap list | grep $programs; then
-      println_sucsess "The software $programs being installed."
-      sudo snap install $programs --classic &> /dev/null
-    else
-      println_sucsess "The software $programs has already been installed."
-    fi
+    println_sucsess "The software $programs being installed."
+    sudo snap install $programs --classic &> /dev/null
   done
 }
