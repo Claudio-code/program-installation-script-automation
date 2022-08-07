@@ -78,6 +78,7 @@ install_package_with_apt () {
 startup_ubuntu () {
   update_system_ubu
   add_docker_ppa_ubu
+  update_system_ubu
   install_package_with_apt
   update_system_ubu
   install_package_with_snaps

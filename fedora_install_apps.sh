@@ -26,7 +26,7 @@ update_system_fed () {
 }
 add_docker_repo () {
   println_sucsess "Adding docker repository."
-  sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+  sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo &> /dev/null
   update_system_fed
 }
 
