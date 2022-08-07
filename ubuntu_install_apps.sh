@@ -41,8 +41,8 @@ LIST_APPS_APT=(
 )
 
 remove_locks_ubu () {
-  rm /var/lib/dpkg/lock-frontend
-  rm /var/cache/apt/archives/lock
+  sudo rm /var/lib/dpkg/lock-frontend
+  sudo rm /var/cache/apt/archives/lock
 }
 
 update_system_ubu () {
