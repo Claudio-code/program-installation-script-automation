@@ -20,7 +20,7 @@ install_package_with_snaps () {
   for programs in ${SOFTWARE_TO_INSTALL_SNAPS[@]}; do
     if ! snap list | grep $programs; then
       println_sucsess "The software $programs being installed."
-      sudo snap install $programs -y &> /dev/null
+      sudo snap install $programs &> /dev/null
     else
       println_sucsess "The software $programs has already been installed."
     fi
