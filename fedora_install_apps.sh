@@ -45,6 +45,8 @@ startup_fedora () {
   update_system_fed
   add_rpm_fusion
   update_system_fed
+  add_docker_repo
+  update_system_fed
   install_apps_dnf
   install_package_with_snaps
   install_package_with_flatpak
