@@ -2,7 +2,7 @@
 
 source ./util_functions.sh
 source ./flatpak_install_apps.sh
-source ./install_package_with_snaps.sh
+source ./snap_install_apps.sh
 source ./ubuntu_install_apps.sh
 source ./fedora_install_apps.sh
 

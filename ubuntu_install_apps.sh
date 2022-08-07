@@ -2,7 +2,7 @@
 
 source ./util_functions.sh
 source ./flatpak_install_apps.sh
-source ./install_package_with_snaps.sh
+source ./snap_install_apps.sh
 
 DOCKER_ADD_PPA="deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
