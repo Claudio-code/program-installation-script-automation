@@ -3,13 +3,13 @@
 source ./util_functions.sh
 
 SOFTWARE_TO_INSTALL_SNAPS=(
+  mockoon
   1password
   teams
   notion-snap
 )
 
 SOFTWARE_TO_INSTALL_SNAPS_LEGACY=(
-  code
   kontena-lens
   intellij-idea-community
   kubectl
